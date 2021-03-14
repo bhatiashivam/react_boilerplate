@@ -1,0 +1,23 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: #3c4147;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  list-style: none;
+}
+
+.link {
+  color: #FFF;
+}
+.link:hover {
+   color: lightgrey;
+}
