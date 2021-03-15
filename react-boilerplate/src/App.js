@@ -1,9 +1,9 @@
 import React from "react";
 
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import Shop from "./Pages/Shop";
-import ItemDetail from "./Pages/ItemDetail";
+import Home from "./Pages/Home/Home";
+import About from "./Pages/About/About";
+import Shop from "./Pages/Shop/Shop";
+import ItemDetail from "./Pages/ItemDetail/ItemDetail";
 
 import Nav from "./components/Nav/Nav.component.jsx";
 
