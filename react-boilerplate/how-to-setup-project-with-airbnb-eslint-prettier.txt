@@ -1,0 +1,42 @@
+- clone this repo
+- cd into project
+- run command:
+    npm i -D eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-node eslint-config-node
+- run command:
+    npx install-peerdeps --dev eslint-config-airbnb
+- run command:
+    npm i -g eslint
+- run command:
+    eslint --init
+- add this object to 'rules' in '.eslintrc.json':
+    { "linebreak-style": ["error", "windows"] }
+- done!
+
+-----------------------------
+final .eslintrc.json is below:
+-----------------------------
+
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "prettier"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "prettier"
+    ],
+    "rules": { "linebreak-style": ["error", "windows"] }
+}
