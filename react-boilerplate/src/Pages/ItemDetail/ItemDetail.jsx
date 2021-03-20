@@ -1,12 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 const ItemDetail = ({ match }) => {
-  // access to 'match' is given by <Link> from App.js 'route' tag
+  // access to 'match' is given by <Link> from App.jsx 'route' tag
   //   console.log(match);
-
-  useEffect(() => {
-    fetchItem();
-  }, []);
 
   const [item, setItem] = useState({});
 
@@ -15,15 +11,19 @@ const ItemDetail = ({ match }) => {
       `https://fakestoreapi.com/products/${match.params.id}`
     );
 
-    const item = await data.json();
-    setItem(item);
+    const product = await data.json();
+    setItem(product);
     console.log(item);
   };
+
+  useEffect(() => {
+    fetchItem();
+  }, []);
 
   return (
     <div>
       <h1>{item.title}</h1>
-      <img src={item.image} alt={"product"} style={{ height: "40vh" }}></img>
+      <img src={item.image} alt="product" style={{ height: '40vh' }} />
     </div>
   );
 };
